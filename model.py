@@ -14,24 +14,17 @@ class Breed:
               self.temp=temp
               self.coat=coat
      
-        # getter method 
-   def get_id(self,id,name,temp,coat): 
-        return self._id 
-        return self._name
-        return self._temp
-        return self._coat
-      
-    # setter method for inserting data into table
-   def set_all(self,id,name,temp,coat): 
-        #self._id=id
-        self._name=name
-        self._temp=temp
-        self._coat=coat
+# setter method for setting all attributes except id
+   def set_breed(self,name,temp,coat): 
+#       self._id=id
+        self.name=name
+        self.temp=temp
+        self.coat=coat
 
+breed=Breed(0,"","","")
+print (breed)
 class Pupper:
-    
-   'Common base class for pupper'
-   breed=Breed()  
+     
    def __init__(self,id,name,sex,weight,height,color,birthdate,breed):
               self.id=id
               self.name=name
@@ -43,7 +36,7 @@ class Pupper:
               self.breed=breed
      
    # setter method for inserting data into table
-   def set_all(self,id,name,sex,weight,height,color,birthdate,breed): 
+   def set_pupper(self,name,sex,weight,height,color,birthdate,breed): 
               #self.id=id
               self.name=name
               self.sex=sex
